@@ -1,0 +1,10 @@
+{
+  "name": "cesium-project",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "dependencies": {
+    "cesium": "^1.141.0"
+  }
+}

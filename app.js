@@ -58,6 +58,19 @@ const position = Cesium.Cartesian3.fromDegrees(
   HEIGHT
 );
 
+document.addEventListener("keydown", function (e) {
+  const step = 0.05; // prędkość obrotu
+
+  if (e.key === "q") {
+    // obrót zgodnie z ruchem wskazówek zegara
+    viewer.camera.rotate(Cesium.Cartesian3.UNIT_Z, -step);
+  }
+
+  if (e.key === "e") {
+    // obrót przeciwnie do wskazówek zegara
+    viewer.camera.rotate(Cesium.Cartesian3.UNIT_Z, step);
+  }
+});
 
 const entity = viewer.entities.add({
   position: position,
